@@ -26,13 +26,19 @@ Id, pw, time 쿠키가 존재하고, 저장된 시간이 현재 시간으로부�
 ***
 서버를 실행시키면 다음과 같은 문구가 프린트된다.   
 ![2](https://user-images.githubusercontent.com/28529194/85283514-748bcf80-b4c8-11ea-81fe-e523108444ca.JPG)
-http://localhost:10080/으로 접속 시 로그인 창이 나온다.
+   
+http://localhost:10080/ 으로 접속 시 로그인 창이 나온다.
 ![3](https://user-images.githubusercontent.com/28529194/85283516-748bcf80-b4c8-11ea-98c4-05f8e2b7f34c.JPG)
+   
 아이디와 비밀번호를 입력하고 로그인 버튼을 누르면 secret.html 화면으로 넘어간다.
 ![4](https://user-images.githubusercontent.com/28529194/85283517-75bcfc80-b4c8-11ea-9ef0-f6647bc3173d.JPG)
-![5](https://user-images.githubusercontent.com/28529194/85283506-6fc71b80-b4c8-11ea-94be-d68a4d5fd9fc.JPG)
 cookie.html도 로그인 정보가 유효한 동안 남은 시간을 잘 보여준다.
-![6](https://user-images.githubusercontent.com/28529194/85283509-72297580-b4c8-11ea-8e6c-33170416f0d6.JPG)
+   
+![5](https://user-images.githubusercontent.com/28529194/85283506-6fc71b80-b4c8-11ea-94be-d68a4d5fd9fc.JPG)
 각각의 파일에 직접 접근해도 이미지 파일을 잘 보여준다.
-![7](https://user-images.githubusercontent.com/28529194/85283510-72c20c00-b4c8-11ea-9b82-26134206b4c3.JPG)
+   
+![6](https://user-images.githubusercontent.com/28529194/85283509-72297580-b4c8-11ea-8e6c-33170416f0d6.JPG)
 존재하지 않는 파일의 경우, 404 Not Found 화면을 보여준다.
+   
+![7](https://user-images.githubusercontent.com/28529194/85283510-72c20c00-b4c8-11ea-9b82-26134206b4c3.JPG)
+로그인 유효 시간이 지난 후 각 파일에 접근했을 때, 403 Forbidden 화면을 보여준다
