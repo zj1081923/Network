@@ -19,7 +19,7 @@
          Already received ack는 이미 RTT가 계산이 되어 avgRTT에 반영이 된 상태이고, duplicated ack는 같은 수에 대해 여러 번 오기 때문에 적절한 RTT를 계산할 수 없고 cumulative ack의 경우 어떤 packet send에 대한 ack인지 확인할 수 없기 때문이다.   
          따라서 loss probability 등 환경이 바뀌어도 timeout value는 큰 폭으로 바뀌지 않았다.
        
-    * **def fineSender(sendinfo)**   
+    * **def fineSender(sendinfo)**    
     ![1](https://user-images.githubusercontent.com/28529194/85284650-83738180-b4ca-11ea-8292-e09e4363383a.JPG)   
     데이터를 보내는 함수이다. 처음 시작 시 recvAck thread를 만들어 receiver로부터 ack를 받을 수 있게 하고 meta data를 보낸다. metadata는 dstFilename과 전체 받아야 할 패킷 개수의 정보를 담고 있다. Metadata가 loss될 경우를 대비해 metadata ack를 받았다. 그래서 실제 packet num은 파일 패킷 수보다 1 크다.   
     metadata를 보낸 후로는 file data를 보낸다. 현재의 in_order번째 패킷부터 window size만큼 패킷을 보낸다.   
