@@ -3,7 +3,7 @@
 * python 3.7
    
 ## code explanation
-* server.py
+* server.py   
      **변수**   
      `client_info`: 딕셔너리이며, key는 client id, value는 해당 client의 private ip, public ip, public port number로 구성된 리스트이다.   
      `client_alive`: 리스트이며 client의 id와 keep-alive 메시지를 받은 시간으로 구성되어 있다.   
@@ -28,7 +28,7 @@
      4. exit  
          client가 종료되었으므로, client_info에서 해당 client의 정보를 삭제하고 client_alive에서도 해당 정보를 삭제한다. 또한 client_info의 정보가 업데이트 되었으므로 update_info() 함수 호출을 통해 연결된 모든 client에게 업데이트 된 정보를 전송한다.   
 
-* client.py
+* client.py   
     **변수**   
     `client_info`: 딕셔너리이며, server에 있는 client_info와 동일한 정보를 저장한다.   
     `inNAT`: 같은 NAT 안에 있는 client들의 id를 저장하는 리스트이다.   
