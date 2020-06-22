@@ -3,17 +3,17 @@
 * python 3.6.4
 
 ## function
-* log_write(f_in_name, f_out_name, mode)
+* log_write(f_in_name, f_out_name, mode)   
 복사할 파일의 이름과 새로운 파일 이름, 그리고 mode를 인자로 넘겨준다. 
 mode가 0이면 아래와 같은 형식(복사 시작)을 log에 쓰고,
 ![1](https://user-images.githubusercontent.com/28529194/85282813-583b6300-b4c7-11ea-9011-19fe69de53a6.JPG)
 mode가 1이면 아래와 같은 형식(복사 완료)를 log에 쓴다.
 ![2](https://user-images.githubusercontent.com/28529194/85282817-5a052680-b4c7-11ea-9760-497b4dd5a2bc.JPG)
 
-* rw_in_1k(f_in_object, f_out_object, size=10000)
+* rw_in_1k(f_in_object, f_out_object, size=10000)   
 10000byte씩 읽고 쓰는 함수이다. f_in_object는 복사할 파일의 object이고 f_out_object는 새로운 파일의 object이다.
 
-* total_process(str_in, str_out)
+* total_process(str_in, str_out)   
 받아온 input string에 해당하는 파일을 열고 log_write함수를 호출해 로그에 적고 rw_in_1k를 호출해 파일을 복사한다. 그리고 마찬가지로 log_write 함수로 로그에 복사 완료를 쓰고 파일을 닫는다.
 
 ## how to test program
